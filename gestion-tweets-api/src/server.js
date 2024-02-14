@@ -1,7 +1,10 @@
 // Importation des dépendances
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = 3000;
+// Middleware pour autoriser les requêtes de toutes les sources
+app.use(cors());
 
 // Routes pour les opérations CRUD sur les tweets
 app.get('/tweets', (req, res) => {
@@ -25,6 +28,6 @@ app.delete('/tweets/:id', (req, res) => {
 });
 
 // Démarrage du serveur
-app.listen(port, () => {
-  console.log(`Serveur démarré sur le port ${port}`);
-});
+app.listen(port, (3000) );
+  console.log('Serveur démarré sur le port ${3000}')
+
